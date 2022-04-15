@@ -549,6 +549,10 @@ table caption {
         padding-top: 80px;
         padding-bottom: 0px;
     }
+    
+    .dezembro-content,.grid-content {
+        padding-top: 80px;
+    }
 }
 
 @media (max-width: 420px) {
