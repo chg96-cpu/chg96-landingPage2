@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*MENU */
+
+.header-bg {
+    background-color: black;
+    width: 100%;
+    padding:0 5%;
+    position: fixed;
+    z-index: 1;/*para as imaggens da galeria não sobreporem o menu */
+    top: 0;
+    border-bottom: solid 1px grey;
+    height: 70px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:0;
+    padding-bottom: 0;
+}
+
+.header-content h1 a {
+    text-decoration: none;
+    color: red;
+    font-size: 3rem ;
+}
+
+.header-content ul {
+    display:flex;
+    list-style: none;
+}
+
+.header-content ul li a {
+    display:block;/*usei pra pegar o padding top e bottom,por padrão vem inline*/
+    font-size:1.8rem;
+    text-decoration: none;
+    padding: 2rem;
+    color: red;
+    position: relative;
+}
+
+.header-content ul li a::after {
+    content: '';
+    position: absolute;/*posso posionar aonde eu quero no seu bloco de espaço */
+    background-color: red;
+    bottom: 1.5rem;
+    width: 0%;
+    right: 50%;
+    left: 50%;
+    height: 0.2rem;
+}
+
+.header-content ul li a:hover::after {
+    width: 50%;/* vai ter a width do jeito que quero */
+    left: 25%;
+    right: 25%;/* vai para os lados */
+    transition: all 300ms ease-in-out;
+}
+
+.logo-um {
+    display: none;
+}
+
+/*section intro */
+
+.main-bg {
+    background-image: url('assets/img/slanted-gradient.svg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+.intro-content h2 {
+    font-size: 5rem;
+    margin-bottom:6rem;
+}
+
+.intro-content p {
+    font-size: 2.5rem;
+    margin-bottom: 10rem;
+}
+
+.intro-content {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    min-height: 100vh;
+    padding: 0 5%;
+    justify-items: center;
+    align-items: center;
+}
+
+.intro-text {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100%;
+}
+
+div .intro-img {
+    display: flex;
+    justify-content:center ;
+    height: 450px;
+    width: 450px;
+}
+
+/*PARTE DEZEMBRO */
+
+.dezembro-bg {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.dezembro-content h2 {
+    font-size: 7rem;
+    margin-bottom: 6rem;
+}
+
+.dezembro-content p {
+    font-size:2.5rem;
+}
+
+.dezembro-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/*GRID */
+.grid-content h2 {
+    font-size: 7rem;
+    margin-bottom: 9rem;
+}
+
+.grid-content h3 {
+    font-size: 4rem;
+}
+
+.grid-content p {
+    font-size: 2.5rem;
+}
+
+.grid-content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    padding:0 5%;
+}
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    min-height: 100%;
+    width: 100%;
+}
+
+/*GALLERY*/
+.gallery-bg {
+    width: 100%;
+    min-height: 100vh;
+}
+.gallery-content h2{
+    font-size: 7rem;
+    padding-top: 3.5rem;
+}
+
+.gallery-content {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0 5%;
+    padding-top: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.gallery-img {
+    overflow: hidden;    
+}
+
+.gallery-img img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gallery-img:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.gallery-img figcaption {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/*PRICING*/
+
+.pricing-content h2 {
+    font-size: 7rem;
+    padding-top: 7rem;
+}
+
+.pricing-content {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.pricing-content p {
+    font-size: 2.5rem;
+}
+
+table {
+    width: 99%;
+    border-collapse: collapse;/*colar as bordas */
+}
+
+table td, th {
+    border: 0.3rem solid black;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+tfoot td,th {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+table caption {
+    font-style: italic;
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    text-align: left;
+}
+
+
+
+/*CONTACT */
+
+.contact-bg {
+    background-color: rgb(66, 1, 1);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.contact-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    min-height: 100%;
+    color: white;
+    padding: 0 5%;
+    padding-top: 80px;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-content h2 {
+    font-size: 5rem;
+    margin-bottom:6rem;
+}
+
+.contact-content p {
+    font-size: 2.5rem;
+}
+
+.contact-text {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.contact-img img {
+    padding-top: 2rem;
+    padding-left: 5rem;
+    max-height: 40rem;
+}
+
+.contact-form fieldset {
+    border: none;
+}
+
+.contact-form .form-grid {
+    display: flex;
+    flex-flow: row wrap;/*junção de flex direction e flex wrap */
+    gap: 5rem;
+}
+
+.form-group {
+    flex: 1 1 40rem;
+}
+
+.form-group label {
+    display: block;/*botei pra não ficar nada na linha dos labels*/
+}
+
+.form-group input, .form-group textarea {
+    border:none;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button{
+    border: 0.3rem solid black;
+    background: rgb(66, 1, 1);
+    padding: 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.form-group button:hover{
+    background-color: red;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0rem 0rem 0.3rem 0.3rem black;
+}
+
+.form-group label{
+    font-size: 2rem;
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 2.2rem;
+    padding-bottom: 0.8rem;
+}
+
+.form-group ::placeholder {
+    color: grey;
+}
+
+.white-bg {
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+#check {
+    display: none;
+}
+#botoes {
+    display: none;
+}
+
+@media (max-width: 834px) {
+    div .intro-img {
+        width: 300px;
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+
+}
+
+@media (max-width: 821px) {
+    .grid-content,.dezembro-content .pricing-content {
+        display: flex;
+        justify-content: start;
+        align-content: start;
+    }
+
+}
+
+@media (max-width: 703px) {
+    div .intro-img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+
+}
+
+@media (max-width: 794px) {
+    .header-content {
+        display: none;
+    }
+
+    .menu-content {
+        height: 100%;
+    }
+
+    #botoes {
+        font-size: 25px;
+        display: block;
+        color: white;
+    }
+
+    #botoes .close-btn {
+        display: none;
+    }
+
+    #botoes {
+        position: absolute;
+        right: 45px;
+        top: 16px;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .logo-um {
+        display: block;
+    }
+
+    .logo-um {
+        text-decoration: none;
+        color: red;
+        font-size: 3rem;
+        padding-top: 14.4px;
+        padding-bottom: 14.4px;
+    }
+
+    #check:checked ~ .header-content {
+        z-index: 4;
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color: black;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        overflow: none;
+    }
+
+    #check:checked ~ #botoes .close-btn {
+        display: block;
+    }
+
+    #check:checked ~ #botoes .menu-btn{
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        top: 0;
+        flex-direction: column;
+    }
+
+    li {
+        margin-top: 20px;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 622px) {
+    .intro-img img{
+        display: none;
+    }
+
+    .intro-content,.contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 503px) {
+    html {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .contact-img {
+        display: none;
+    }
+
+    .grid,.gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-content {
+        padding-top: 80px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        width: 100%;
+    }
+
+    .grid-content h2,.dezembro-content h2 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 400px) {
+    table {
+        width: 99%;
+        border-collapse: collapse;/*colar as bordas */
+    }
+    
+    table td, th {
+        border: 0.1rem solid black;
+        text-align: left;
+        padding: 0.2rem;
+        font-size: 1.5rem;
+    }
+    
+    tfoot td,th {
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+    
+    table caption {
+        font-style: italic;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        text-align: left;
+    }
+}
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: grey;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    color: black;
+}
+
+.back-to-top {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
